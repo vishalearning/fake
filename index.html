@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script>
+  // list of numbers (use numeric form without + or spaces)
+  const numbers = [
+    "919080191609",
+    "919227054791",
+    "919302434016",
+    "919771547142"
+  ];
+
+  // message to send
+  const msg = "Hi, I have a few questions about your company’s job opening";
+
+  // pick a random number
+  const pick = numbers[Math.floor(Math.random() * numbers.length)];
+
+  // build wa.me URL with encoded text
+  const url = "https://wa.me/" + pick + "?text=" + encodeURIComponent(msg);
+
+  // redirect immediately
+  window.location.href = url;
+</script>
+</html>
